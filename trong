@@ -8585,88 +8585,24 @@ if World3 then
     RaceV4:Button("Teleport To Acient One", function()
         topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
     end)
-    
-    RaceV4:Button("Unlock Lever", function()
-        venyx:Notify("Unlocked")
-        if game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt") then
-            game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
-        end
-        wait(0.1)
-        local ProximityPrompt = Instance.new("ProximityPrompt")
-        ProximityPrompt.Parent = game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt
-        ProximityPrompt.MaxActivationDistance = 10
-        ProximityPrompt.ActionText = "Secrets Beholds Inside"
-        ProximityPrompt.ObjectText = "An unknown lever of time"
-        
-        function onProximity()
-            local part = game:GetService("Workspace").Map["Temple of Time"].MainDoor1
-            local TweenService = game:GetService("TweenService")
-            
-            local startPosition = part.Position
-            local endPosition = startPosition + Vector3.new(0, -50, 0)
-            
-            local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-            local tween = TweenService:Create(part, tweenInfo, {Position = endPosition})
-            
-            tween:Play()
-            
-            local partnew = game:GetService("Workspace").Map["Temple of Time"].MainDoor2
-            local TweenService = game:GetService("TweenService")
-            
-            local startPosition = partnew.Position
-            local endPosition = startPosition + Vector3.new(0, -50, 0)
-            
-            local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-            local tween = TweenService:Create(partnew, tweenInfo, {Position = endPosition})
-            
-            tween:Play()
-            
-            local SoundSFX = Instance.new("Sound")
-            SoundSFX.Parent = workspace
-            SoundSFX.SoundId = "rbxassetid://1904813041"
-            SoundSFX:Play()
-            SoundSFX.Name = "POwfpxzxzfFfFF"
-            game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
-            wait(5)
-            workspace:FindFirstChild("POwfpxzxzfFfFF"):Remove()
-            game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-            game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-            game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-        end
-        
-        ProximityPrompt.Triggered:Connect(onProximity)
-    end)
-    
-    RaceV4:Button("Clock Acces", function()
-        game:GetService("Workspace").Map["Temple of Time"].DoNotEnter:Remove()
-        game:GetService("Workspace").Map["Temple of Time"].ClockRoomExit:Remove()
-    end)
-    
-    RaceV4:Toggle("Auto Buy Gear", _G.Auto_Farm_Bone4, false, function(value)
-        _G.Auto_Farm_Bone4 = value
-        StopTween(_G.Auto_Farm_Bone4)
-    end)
-    spawn(function()
-        pcall(function()
-            while wait(0.1) do
-                if _G.Auto_Farm_Bone4 then
-                    local args = {
-                        [1] = true
-                    }
-                    
-                    local args = {
-                        [1] = "UpgradeRace",
-                        [2] = "Buy"
-                    }
-                    
-                    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-                end
-            end
-        end)
-    end)
+
     RaceV4:Toggle("Teleport To Mirage Island", _G.AutoMysticIsland, "Tween To Mirage Island", function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
+        local function CheckTeleportComplete()
+            if _G.TeleportComplete then
+                _G.AutoDooHee = value
+                wait(2)
+                _G.AutoAgility = value
+                wait(10)
+                _G.TweenMGear = value
+                StopTween(_G.TweenMGear)
+            else
+                wait(1)
+                CheckTeleportComplete()
+            end
+        end
+        CheckTeleportComplete()
     end)
     
     RaceV4:Toggle("Tween Gear", _G.TweenMGear, "Tween To Gear", function(value)
