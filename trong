@@ -2570,7 +2570,7 @@ Main:Seperator("Boss Farm")
 
 
 local BoSs = Main:Label("Status : Select Boss")
-
+    _G.SelectBoss = "Cursed Captain"
 
 spawn(function()
     while wait() do
@@ -2584,13 +2584,6 @@ spawn(function()
     end
 end)
 
-if World1 then
-    tableBoss = {"The Gorilla King", "Bobby", "Yeti", "Mob Leader", "Vice Admiral", "Warden", "Chief Warden", "Swan", "Magma Admiral", "Fishman Lord", "Wysper", "Thunder God", "Cyborg", "Saber Expert"}
-elseif World2 then
-    tableBoss = {"Diamond", "Jeremy", "Fajita", "Don Swan", "Smoke Admiral", "Cursed Captain", "Darkbeard", "Order", "Awakened Ice Admiral", "Tide Keeper"}
-elseif World3 then
-    tableBoss = {"Stone", "Island Empress", "Kilo Admiral", "Captain Elephant", "Beautiful Pirate", "rip_indra True Form", "Longma", "Soul Reaper", "Cake Queen"}
-end
 
 Main:Dropdown("Select Boss", tableBoss, false, function(value)
     _G.SelectBoss = value
