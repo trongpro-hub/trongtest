@@ -2568,10 +2568,29 @@ end)
 
 Main:Seperator("Boss Farm")
 
+Main:Label("Status : Select Boss")
 
+-- Đặt boss mặc định là "Cursed Captain"
+_G.SelectBoss = "Cursed Captain"
+
+-- Dropdown để chọn boss, mặc dù boss mặc định là "Cursed Captain"
+local tableBoss = {
+    ["World1"] = {"The Gorilla King", "Bobby", "Yeti", "Mob Leader", "Vice Admiral", "Warden", "Chief Warden", "Swan", "Magma Admiral", "Fishman Lord", "Wysper", "Thunder God", "Cyborg", "Saber Expert"},
+    ["World2"] = {"Diamond", "Jeremy", "Fajita", "Don Swan", "Smoke Admiral", "Cursed Captain", "Darkbeard", "Order", "Awakened Ice Admiral", "Tide Keeper"},
+    ["World3"] = {"Stone", "Island Empress", "Kilo Admiral", "Captain Elephant", "Beautiful Pirate", "rip_indra True Form", "Longma", "Soul Reaper", "Cake Queen"}
+}
+
+-- Xác định thế giới hiện tại và cập nhật danh sách boss
+local currentWorld = "World2" -- Thay đổi theo thế giới hiện tại của bạn
+local currentBossList = tableBoss[currentWorld] or {}
+
+-- Dropdown để chọn boss
+Main:Dropdown("Select Boss", currentBossList, false, function(value)
+    _G.SelectBoss = value
+end)
+
+-- Hiển thị trạng thái spawn của boss
 local BoSs = Main:Label("Status : Select Boss")
-    _G.SelectBoss = "Cursed Captain"
-end
 
 spawn(function()
     while wait() do
@@ -2585,11 +2604,7 @@ spawn(function()
     end
 end)
 
-
-Main:Dropdown("Select Boss", tableBoss, false, function(value)
-    _G.SelectBoss = value
-end)
-
+-- Toggle để tự động farm boss
 Main:Toggle("Auto Farm Boss", _G.AutoFarmBoss, "Auto Kill Selected Boss", function(value)
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
     _G.AutoFarmBoss = value
@@ -2600,9 +2615,10 @@ spawn(function()
     while wait() do
         if _G.AutoFarmBoss then
             pcall(function()
-                if game:GetService("Workspace").Enemies:FindFirstChild(_G.SelectBoss) then
+                -- Chỉ nhắm đến boss "Cursed Captain"
+                if game:GetService("Workspace").Enemies:FindFirstChild("Cursed Captain") then
                     for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                        if v.Name == _G.SelectBoss then
+                        if v.Name == "Cursed Captain" then
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 repeat task.wait(_G.FastAttackDelay)
                                     AutoHaki()
@@ -2618,8 +2634,8 @@ spawn(function()
                         end
                     end
                 else
-                    if game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss) then
-                        topos(game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss).HumanoidRootPart.CFrame * CFrame.new(5, 10, 2))
+                    if game:GetService("ReplicatedStorage"):FindFirstChild("Cursed Captain") then
+                        topos(game:GetService("ReplicatedStorage"):FindFirstChild("Cursed Captain").HumanoidRootPart.CFrame * CFrame.new(5, 10, 2))
                     end
                 end
             end)
