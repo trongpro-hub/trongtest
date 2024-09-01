@@ -8589,6 +8589,7 @@ if World3 then
     RaceV4:Toggle("Teleport To Mirage Island", _G.AutoMysticIsland, "Tween To Mirage Island", function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
+        local function CheckTeleportComplete()
         _G.AutoDooHee = value
         wait(2)
         _G.AutoAgility = value
