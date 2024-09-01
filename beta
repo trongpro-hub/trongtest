@@ -8590,12 +8590,19 @@ if World3 then
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         local function CheckTeleportComplete()
-        _G.AutoDooHee = value
-        wait(2)
-        _G.AutoAgility = value
-        wait(10)
-        _G.TweenMGear = value
-        StopTween(_G.TweenMGear)
+            if _G.TeleportComplete then
+                _G.AutoDooHee = value
+                wait(2)
+                _G.AutoAgility = value
+                wait(10)
+                _G.TweenMGear = value
+                StopTween(_G.TweenMGear)
+            else
+                wait(1)
+                CheckTeleportComplete()
+            end
+        end
+        CheckTeleportComplete()
     end)
     
     RaceV4:Toggle("Tween Gear", _G.TweenMGear, "Tween To Gear", function(value)
