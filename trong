@@ -2571,6 +2571,7 @@ Main:Seperator("Boss Farm")
 
 local BoSs = Main:Label("Status : Select Boss")
     _G.SelectBoss = "Cursed Captain"
+end
 
 spawn(function()
     while wait() do
