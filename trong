@@ -3,7 +3,18 @@ local Alert = loadstring(Game:HttpGet "https://roblox.relzscript.xyz/source/relz
 local Library = Update:Window("Blox Fruits")
 local Main = Library:Tab("Main Farm", "rbxassetid://10723407389")
 local Set = Library:Tab("Setting", "rbxassetid://10734950309")
+local Hold = Library:Tab("Hold Skill", "rbxassetid://10734984606")
+local M = Library:Tab("Items", "rbxassetid://10709769841")
+local Sea = Library:Tab("Sea", "rbxassetid://10709761530")
+local Ss = Library:Tab("Stats", "rbxassetid://10709770317")
+local RaceV4 = Library:Tab("Race", "rbxassetid://10747372167")
+local P = Library:Tab("Combat", "rbxassetid://10734975486")
+local R = Library:Tab("Raid", "rbxassetid://10723345749")
+local ESP = Library:Tab("Esp", "rbxassetid://10723346959")
 local T = Library:Tab("Teleport", "rbxassetid://10723434557")
+local S = Library:Tab("Shop", "rbxassetid://10734952479")
+local D = Library:Tab("Devil Fruit", "rbxassetid://10709761889")
+local Misc = Library:Tab("Misc", "rbxassetid://10723424838")
 local Serv = Library:Tab("Server", "rbxassetid://10723426722")
 
 if game.PlaceId == 2753915549 then
