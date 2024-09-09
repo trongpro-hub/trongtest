@@ -2370,12 +2370,12 @@ local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 CamShake:Stop()
 
     HttpService = game:GetService("HttpService")
-    local i = "Maris Hub"
+    local i = "Night Hub"
     local j = "-BloxFruit.json"
     local l = game.Players.LocalPlayer.Name .. j
     if Adel then
         HttpService = game:GetService("HttpService")
-        local i = "Maris Hub"
+        local i = "Night Hub"
         local j = "-BloxFruit.json"
         local l = game.Players.LocalPlayer.Name .. j
     end
@@ -2519,132 +2519,91 @@ spawn(function()
     end
 end)
 
-spawn(function() 
-    repeat
-        task.wait()
-    until game:IsLoaded()
-    repeat
-        task.wait()
-    until game.Players
-    repeat
-        task.wait()
-    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
-    wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Welcome Maris Hub!<Color=/>"):Display()
-    wait(.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Thanks for using<Color=/>"):Display()
-    wait(.14)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Cày Thuê Ở Discord<Color=/>"):Display()
-    wait(.24)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Dev: Maris Hub<Color=/>"):Display()
-end)
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Maris Hub", HidePremium = false, IntroText = "Maris Hub", SaveConfig = true, ConfigFolder = "Maris Hub"})
+local Window = OrionLib:MakeWindow({Name = "", HidePremium = false, IntroText = "y", SaveConfig = true, ConfigFolder = ""})
 
-OrionLib:MakeNotification({
-	Name = "Maris Hub",
-	Content = "Choose Teams Bro?",
-	Image = "rbxassetid://4483345998",
-	Time = 7
+-------------Tab----------------------
+
+local R = Window:MakeTab({
+    Name = "☣️ Race V4",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
-
-OrionLib:MakeNotification({
-	Name = "Maris Hub",
-	Content = "Please Wait...",
-	Image = "rbxassetid://4483345998",
-	Time = 25
-})
-
-OrionLib:MakeNotification({
-    Name = "Maris Hub",
-    Content = "Loading...",
-    Image = "rbxassetid://4483345998",
-    Time = 5
-})
-
--------------Tab-----------------------
 
 local W = Window:MakeTab({
-    Name = "Welcome",
+    Name = "👋 Welcome",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
-    Name = "General",
+    Name = "🏠 General",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
-    Name = "Setting",
+    Name = "🛠️ Setting",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
-    Name = "Item & Quest",
+    Name = "⚔️ Item & Quest",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
-    Name = "Stats",
+    Name = "📊 Stats",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local E = Window:MakeTab({
-    Name = "ESP",
+    Name = "🔎 ESP",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local RA = Window:MakeTab({
-    Name = "Raid",
+    Name = "🎆 Raid",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
-    Name = "Local Players",
+    Name = "🙆‍♂️ Local Players",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local Wld = Window:MakeTab({
-    Name = "World Teleport",
+    Name = "🌍 World Teleport",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
-    Name = "Status Sever",
+    Name = "📈 Status Sever",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local D = Window:MakeTab({
-    Name = "Devil Fruit",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local R = Window:MakeTab({
-    Name = "Race V4",
+    Name = "🍍 Devil Fruit",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "Shop",
+    Name = "🛒 Shop",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "Misc",
+    Name = "🔰 Misc",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2655,16 +2614,11 @@ local Section = W:AddSection({
 })
 
 
-W:AddLabel("Script By Maris")
+W:AddLabel("Script By LMNGAMING")
 
 local Section = W:AddSection({
     Name = "Update"
 })
-
-W:AddLabel("[+] Welcome to Maris Hub!")
-W:AddLabel("[+] Discord: https://discord.com/invite/S4EtaxnZ3D")
-W:AddLabel("[+] Cày Thuê Ở Discord")
-W:AddLabel("[+] Load Script Faster!")
 
 local Section = W:AddSection({
     Name = "Status"
@@ -2754,6 +2708,115 @@ local locallv = W:AddLabel("Level")
             end)
         end
     end)
+
+    local Section = W:AddSection({
+        Name = "Status Hack"
+    })
+    
+    local LevelFarmFarm W:AddLabel("Kaitun : Đell có(sắp có)")
+    W:AddLabel("Config Save : Comming Son...")
+    local Farmfast = W:AddLabel("Farm Fast : ❌")
+    local Bypass = W:AddLabel("Bypass ❌")
+    local Section = W:AddSection({
+        Name = "World"
+    })
+    local WolrdSet3 = W:AddLabel("World 1 ❌ ")
+    local WolrdSet = W:AddLabel("Wolrd : 2 ❌")
+    local WolrdSet1 = W:AddLabel("Wolrd : 3 ❌")
+    local Section = W:AddSection({
+        Name = "Stats Point"
+    })
+    local StastMelee = W:AddLabel("")
+    local StastDefense = W:AddLabel("")
+    local StastSword = W:AddLabel("")
+    local StastGun = W:AddLabel("")
+    local StastDevilFruit = W:AddLabel("")
+    local PointsStast = W:AddLabel("")
+    local Section = W:AddSection({
+        Name = "Melee Check"
+    })
+    local  Superhuman =             W:AddLabel("❌ : Superhuman")
+    local  DeathStep =              W:AddLabel("❌ : Sharkman Karate")
+    local  ElectricClaw =             W:AddLabel("❌ : Electric Claw")
+    local  DragonTalon =             W:AddLabel("❌ : Dragon Talon")
+    local   GodHuman =            W:AddLabel("❌ : God Human")
+    local Section = W:AddSection({
+        Name = "Sword Legend Check"
+    })
+    local   Shisui =            W:AddLabel("❌ : Shisui")
+    local     Saddi =           W:AddLabel("❌ : Saddi")
+    local      Wando =         W:AddLabel("❌ : Wando")
+    local     TrueTripleKatana          W:AddLabel("❌ : True Triple Katana")
+    local Section = W:AddSection({
+        Name = "World 1 Weapon"
+    })
+    local   Saber  = W:AddLabel("❌ : Saber")
+    local Section = W:AddSection({
+        Name = "World 2 Weapon"
+    })
+    local       Rengoku =         W:AddLabel("❌ : Rengoku")
+    local    MidnightBlade =            W:AddLabel("❌ : Midnight Blade")
+    local       DragonTrident =        W:AddLabel("❌ : DragonTrident")
+    local Section = W:AddSection({
+        Name = "World 3 Weapon"
+    })
+    local     Yama =          W:AddLabel("❌ : Yama")
+    local        BuddySword =        W:AddLabel("❌ : Buddy Sword")
+    local       Canvander =        W:AddLabel("❌ : Canvander")
+    local      TwinHooks =         W:AddLabel("❌ : Twin Hooks")
+    local     SpikeyTrident =          W:AddLabel("❌ : Spikey Trident")
+    local   HallowScythe =            W:AddLabel("❌ : Hallow Scythe")
+    local     DarkDagger =           W:AddLabel("❌ : Dark Dagger")
+    local     Tushita          W:AddLabel("❌ : Tushita")
+    local Section = W:AddSection({
+        Name = "Gun"
+    })
+    local   Kabucha =            W:AddLabel("❌ : Kabucha")
+    local   AcidumRifle =             W:AddLabel("❌ : Acidum Rifle")
+    local    BizarreRifle =            W:AddLabel("❌ : Bizarre Rifle")
+    local Section = W:AddSection({
+        Name = "Quest"
+    })
+    local   BartiloQuest =            W:AddLabel("❌ : Bartilo Quest")
+    local   DonSwanQuest =             W:AddLabel("❌ : Don Swan Quest")
+    local    KillDonSwan =           W:AddLabel("❌ : Kill Don Swan")
+
+
+local Section = W:AddSection({
+    Name = "Acessory"
+})
+
+
+local Dark_Coat = W:AddLabel("❌: Dark Coat")
+local Ghoul_Mask = W:AddLabel("❌: Ghoul Mask")
+local Swan_Glass = W:AddLabel("❌: Swan Glass")
+local Pale_Scarf = W:AddLabel("❌: Pale Scarf")
+local Valkyrie_Helm = W:AddLabel("❌: Valkyrie Helm")
+
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
+                if v.Name == "Saber" then
+                    Dark_Coat:Set("✅: Dark Coat")
+                end
+                if v.Name == "Ghoul Mask" then
+                    Ghoul_Mask:Set("✅: Ghoul Mask")
+                end
+                if v.Name == "Swan Glasses" then
+                    Swan_Glass:Set("✅: Swan Glass")
+                end
+                if v.Name == "Pale Scarf" then
+                    Pale_Scarf:Set("✅: Pale Scarf")
+                end
+                if v.Name == "Valkyrie Helmet" then
+                    Valkyrie_Helm:Set("✅: Valkyrie Helmet")
+                end
+            end
+        end)
+    end
+end)
 
 local Section = M:AddSection({
     Name = "Select Weapon"
@@ -3130,7 +3193,7 @@ end)
 local AttackList = {"0", "0.1", "0.175", "0.2", "0.25", "0.3", "0.35", "0.4", "0.45", "0.5", "0.55", "0.6", "0.65", "0.7", "0.75", "0.8", "0.85", "0.9", "0.95", "0.1"}
 M:AddDropdown({
 	Name = "FastAttack Delay",
-	Default = "0",
+	Default = "0.5",
 	Options = AttackList,
     Flag = "FastAttack Delay",
     Save = true,
@@ -4033,7 +4096,7 @@ IQ:AddToggle({
             Name = "ArenaTrainer"
         })
 
-        IQ:AddLabel("Tự động đánh hình nộm")
+        IQ:AddLabel("Cho thằng nào đell hiểu thì đây là tự động đánh hình nộm")
 
         IQ:AddToggle({
             Name = "Automatically hit the dummy",
@@ -6302,7 +6365,7 @@ C:AddButton({
 })
 
 C:AddButton({
-    Name = "Maris Hub",
+    Name = "Title Tab",
     Callback = function()
         local args = {
             [1] = "getTitles"
@@ -8267,14 +8330,14 @@ pcall(function()
         if _G.AutoEliteHunter then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Night Hub(Noitification)",
                     Content = "[EN] : Please cancel the farrm level quest (if any)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
                 })
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
-                    Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level (nếu có)",
+                    Name = "Night Hub(Noitification)",
+                    Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level(nếu có)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
                 })
@@ -8442,7 +8505,7 @@ spawn(function()
             if _G.AutoObservation then
                 if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
                     OrionLib:MakeNotification({
-                        Name = "Maris Hub",
+                        Name = "NIGHT HUB BOT",
                         Content = "!!You Are Max Point!!",
                         Image = "rbxassetid://14919714384",
                         Time = 5
@@ -8591,7 +8654,7 @@ spawn(function()
         if Mybeli <= 2500000 or MyFragment <= 5000 then
             wait(2.0)
             OrionLib:MakeNotification({
-                Name = "Maris Hub",
+                Name = "Night Hub",
                 Content = "You not have beli or fragment!",
                 Image = "rbxassetid://4483345998",
                 Time = 5
@@ -8752,7 +8815,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Superhuman",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8765,7 +8828,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Death Step",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8778,7 +8841,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have SharkMan Karate",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8791,7 +8854,7 @@ spawn(function()
                         end
                     else
                         gOrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Electric Claw",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8802,7 +8865,7 @@ spawn(function()
                         if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon").Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon").Level.Value >= 400 then
                             if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true), "Bring") then
                                 OrionLib:MakeNotification({
-                                    Name = "Maris Hub",
+                                    Name = "NIGHT HUB BOT",
                                     Content = "Not Have Enough Material",
                                     Image = "rbxassetid://14919714384",
                                     Time = 5
@@ -8814,7 +8877,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "NIGHT HUB BOT",
                             Content = "You Not Have Dragon Talon! ",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -11213,7 +11276,7 @@ spawn(function()
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Night Hub",
                     Content = "Turn Off Hop Find Moon Please",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11221,7 +11284,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11229,7 +11292,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11237,7 +11300,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11250,7 +11313,7 @@ spawn(function()
     end)
 
 OrionLib:MakeNotification({
-        Name = "Maris Hub",
+        Name = "Night Hub",
         Content = "Loading script complete!, You can now enable the function!",
         Image = "rbxassetid://4483345998",
         Time = 5
@@ -11283,7 +11346,7 @@ end)
 OrionLib:Init()
 
 OrionLib:MakeNotification({
-    Name = "Maris Hub",
+    Name = "Night Hub",
     Content = "Loading Config Complete!!",
     Image = "rbxassetid://4483345998",
     Time = 5
