@@ -2520,7 +2520,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Night Hub", HidePremium = false, IntroText = "NightHub Library", SaveConfig = true, ConfigFolder = "Night Hub"})
+local Window = OrionLib:MakeWindow({Name = "", HidePremium = false, IntroText = "y", SaveConfig = true, ConfigFolder = ""})
 
 -------------Tab----------------------
 
